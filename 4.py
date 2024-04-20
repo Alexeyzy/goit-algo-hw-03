@@ -35,6 +35,8 @@ def get_upcoming_birthdays(users):
 
                 user["congratulation_date"] = user.pop("birthday")
                 user.update({"name":user["name"], "congratulation_date":birthday_this_year})
+            else:
+                user.clear() # Питання як прибрати пусті словники зі списку?    
    
     return users
 
